@@ -111,6 +111,16 @@
     cursor: pointer;
   }
   .see-more:hover { text-decoration: underline; }
+  .post-main { display: flex; flex-direction: column; gap: 0.15rem; }
+  .posts a.post-project {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.76rem;
+    color: var(--muted);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    width: fit-content;
+  }
+  .posts a.post-project:hover { color: var(--fg); }
 
   /* Elsewhere links */
   .links {
@@ -147,18 +157,27 @@
       <h2>Writing</h2>
       <ul class="posts">
         <li>
-          <a href="writing/soon-launching-mexico.html">Soon launching Mexico</a>
+          <div class="post-main">
+            <a class="post-title" href="writing/soon-launching-mexico.html">Soon launching Mexico</a>
+            <a class="post-project" href="projects/soko.html">Soko</a>
+          </div>
           <time datetime="2026-08-06">Aug 2026</time>
         </li>
         <li>
-          <a href="writing/hello.html">Hello</a>
+          <div class="post-main">
+            <a class="post-title" href="writing/hello.html">Hello</a>
+            <a class="post-project" href="projects/urbvan.html">Urbvan</a>
+          </div>
           <time datetime="2026-08-06">Aug 2026</time>
         </li>
         <li>
-          <a href="writing/why-local-discovery-is-hard.html">Why local discovery is hard</a>
+          <div class="post-main">
+            <a class="post-title" href="writing/why-local-discovery-is-hard.html">Why local discovery is hard</a>
+            <a class="post-project" href="projects/soko.html">Soko</a>
+          </div>
           <time datetime="2026-08-06">Aug 2026</time>
         </li>
-        <!-- Add new posts by copying a <li> and pointing it at a new file in /writing -->
+        <!-- Add new posts by copying a <li>: title + optional project tag pointing at /projects -->
       </ul>
     </section>
 
