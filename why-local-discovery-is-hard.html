@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Why local discovery is hard — Joao Albino</title>
+<meta name="description" content="A short note on why finding good things nearby is a genuinely hard product problem." />
+
+<style>
+  :root {
+    --bg: #ffffff; --fg: #16130f; --muted: #7a746c; --line: #e7e3dc; --maxw: 40rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111010; --fg: #ece7df; --muted: #8f877c; --line: #2a2724; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: "Charter", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 19px; line-height: 1.7; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  a { color: inherit; text-underline-offset: 3px; }
+  .back {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.85rem; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 2.5rem;
+  }
+  .back:hover { text-decoration: underline; }
+  article h1 { font-size: 1.9rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; margin: 0 0 0.5rem; }
+  .meta {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem; color: var(--muted); margin: 0 0 2.5rem;
+  }
+  article p { margin: 0 0 1.3rem; }
+  article h2 { font-size: 1.25rem; font-weight: 600; margin: 2.5rem 0 0.75rem; letter-spacing: -0.01em; }
+  blockquote {
+    margin: 1.8rem 0; padding-left: 1.2rem; border-left: 2px solid var(--line);
+    color: var(--muted); font-style: italic;
+  }
+  footer {
+    margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../index.html">&larr; Joao Albino</a>
+
+    <article>
+      <h1>Why local discovery is hard</h1>
+      <p class="meta">August 6, 2026</p>
+
+      <!-- This is a sample post so you can see the format. Replace the words with your own. -->
+      <p>Everyone has typed "best coffee near me" and scrolled past ten identical results. The strange thing is that the information exists. The places are there, the people who love them are there. The gap is not data. It is trust, context, and timing.</p>
+
+      <p>Most discovery products optimize for the average. They rank by review count, which rewards places that have been around long enough to accumulate reviews, which are rarely the places worth discovering. The interesting spot that opened three months ago loses to the chain on the corner every time.</p>
+
+      <h2>Taste does not average well</h2>
+      <p>The second problem is that "good" is not a property of a place. It is a relationship between a place and a person on a particular day. The bar that is perfect at 6pm with two friends is wrong at 9am alone. Ranking systems flatten all of that into a single number.</p>
+
+      <blockquote>The goal is not to tell you the best place. It is to tell you the right place, for you, right now.</blockquote>
+
+      <p>That is the bet behind what I'm building. More on that soon.</p>
+    </article>
+
+    <footer>&copy; <span id="year">2026</span> Joao Albino &middot; <a href="../index.html">home</a></footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

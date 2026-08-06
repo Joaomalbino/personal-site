@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Joao Albino</title>
+<meta name="description" content="Founder of Soko. Building local discovery. Notes on companies, cities, and product." />
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Joao Albino" />
+<meta property="og:description" content="Founder of Soko. Building local discovery. Notes on companies, cities, and product." />
+<meta property="og:url" content="https://www.joaomatosalbino.com" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>·</text></svg>" />
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #16130f;
+    --muted: #7a746c;
+    --line: #e7e3dc;
+    --accent: #16130f;
+    --maxw: 40rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111010;
+      --fg: #ece7df;
+      --muted: #8f877c;
+      --line: #2a2724;
+      --accent: #ece7df;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Charter", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 5rem 1.5rem 6rem;
+  }
+
+  a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-color: var(--muted); }
+
+  /* Header */
+  header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.25rem;
+  }
+  .tagline { color: var(--muted); margin: 0 0 2.5rem; font-style: italic; }
+
+  /* Intro prose */
+  .intro p { margin: 0 0 1.1rem; }
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* Section */
+  section { margin-top: 3.5rem; }
+  h2 {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 1.25rem;
+  }
+
+  /* Writing list */
+  .posts { list-style: none; margin: 0; padding: 0; }
+  .posts li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .posts li:last-child { border-bottom: 1px solid var(--line); }
+  .posts a { text-decoration: none; }
+  .posts a:hover { text-decoration: underline; }
+  .posts time {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Elsewhere links */
+  .links {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.92rem;
+  }
+
+  footer {
+    margin-top: 4.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Joao Albino</h1>
+      <p class="tagline">Founder of Soko. Building local discovery, based in Lisbon.</p>
+    </header>
+
+    <div class="intro">
+      <!-- TODO: make this yours. First draft below, written from what I know. -->
+      <p>I'm the founder and CEO of <a href="#">Soko</a>, a local discovery app helping people find the good things around them. Before Soko I founded <a href="#">Urbvan</a>, a mobility startup.</p>
+      <p>I think a lot about cities, how people move through them, and how software can make a place feel smaller and more legible. I write here occasionally about building companies, product, and whatever I'm learning.</p>
+    </div>
+
+    <section>
+      <h2>Writing</h2>
+      <ul class="posts">
+        <li>
+          <a href="writing/why-local-discovery-is-hard.html">Why local discovery is hard</a>
+          <time datetime="2026-08-06">Aug 2026</time>
+        </li>
+        <!-- Add new posts by copying a <li> and pointing it at a new file in /writing -->
+      </ul>
+    </section>
+
+    <section>
+      <h2>Elsewhere</h2>
+      <!-- TODO: replace # with your real profiles; delete any you don't want -->
+      <ul class="links">
+        <li><a href="#">X / Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="mailto:j@heyl.ai">Email</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; <span id="year">2026</span> Joao Albino
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
