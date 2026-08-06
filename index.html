@@ -100,6 +100,17 @@
     white-space: nowrap;
     font-variant-numeric: tabular-nums;
   }
+  .posts li.is-hidden { display: none; }
+  .see-more {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+    background: none;
+    border: none;
+    padding: 0.7rem 0 0;
+    cursor: pointer;
+  }
+  .see-more:hover { text-decoration: underline; }
 
   /* Elsewhere links */
   .links {
@@ -176,6 +187,35 @@
       &copy; <span id="year">2026</span> Joao Albino
     </footer>
   </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Collapse any list with more than LIMIT entries behind a "See more" toggle.
+    (function () {
+      var LIMIT = 5;
+      document.querySelectorAll('ul.posts').forEach(function (list) {
+        var items = Array.prototype.slice.call(list.querySelectorAll(':scope > li'));
+        if (items.length <= LIMIT) return;
+
+        var hidden = items.slice(LIMIT);
+        hidden.forEach(function (li) { li.classList.add('is-hidden'); });
+
+        var btn = document.createElement('button');
+        btn.className = 'see-more';
+        btn.type = 'button';
+        var remaining = hidden.length;
+        btn.textContent = 'See ' + remaining + ' more ↓';
+
+        var expanded = false;
+        btn.addEventListener('click', function () {
+          expanded = !expanded;
+          hidden.forEach(function (li) { li.classList.toggle('is-hidden', !expanded); });
+          btn.textContent = expanded ? 'See less ↑' : ('See ' + remaining + ' more ↓');
+        });
+
+        list.parentNode.insertBefore(btn, list.nextSibling);
+      });
+    })();
+  </script>
 </body>
 </html>
