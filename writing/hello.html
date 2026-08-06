@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hello — Joao Albino</title>
+<meta name="description" content="Hello." />
+
+<style>
+  :root {
+    --bg: #ffffff; --fg: #16130f; --muted: #7a746c; --line: #e7e3dc; --maxw: 40rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111010; --fg: #ece7df; --muted: #8f877c; --line: #2a2724; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: "Charter", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 19px; line-height: 1.7; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  a { color: inherit; text-underline-offset: 3px; }
+  .back {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.85rem; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 2.5rem;
+  }
+  .back:hover { text-decoration: underline; }
+  article h1 { font-size: 1.9rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; margin: 0 0 0.5rem; }
+  .meta {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem; color: var(--muted); margin: 0 0 2.5rem;
+  }
+  article p { margin: 0 0 1.3rem; }
+  footer {
+    margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../index.html">&larr; Joao Albino</a>
+
+    <article>
+      <h1>Hello</h1>
+      <p class="meta">August 6, 2026</p>
+
+      <p>hello hello</p>
+    </article>
+
+    <footer>&copy; <span id="year">2026</span> Joao Albino &middot; <a href="../index.html">home</a></footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
